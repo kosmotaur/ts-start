@@ -1,0 +1,30 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "es6": true
+  },
+  "ignorePatterns": ["node_modules"],
+  "extends": [
+    "eslint:recommended",
+    "prettier",
+    "plugin:prettier/recommended"
+  ],
+  "rules": {
+    "no-multiple-empty-lines": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.cjs"],
+      "env" : {
+        "commonjs": true
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended"
+      ]
+    }
+  ]
+}
